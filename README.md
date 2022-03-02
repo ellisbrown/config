@@ -27,14 +27,13 @@ ln -s ~/config/aliases ~/.aliases
 
 ## github creds
 
+0. 
 1. install github cli
     ```bash
-    conda config --add channels conda-forge
-    conda config --set channel_priority strict
-    conda install gh
+    brew install gh
     ```
 2. login
     ```bash
-    gh auth login	
+    gh auth login
     ```
 
