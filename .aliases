@@ -1,0 +1,20 @@
+# aliases
+
+alias sv="snakeviz --port 8081"
+
+alias tn="tmux new -A -s"
+alias ta="tmux attach -t"
+alias tl="tmux ls"
+alias tk="tmux kill-session -t"
+#alias ns="nvidia-smi"
+alias ns="watch -d -n 0.5 nvidia-smi"
+
+setcuda () {
+        export CUDA_VISIBLE_DEVICES=$1
+}
+
+rsc () {
+	shell=${SHELL##*/}
+	source ~/.${shell}rc 
+}
+
