@@ -27,7 +27,10 @@ ln -s ~/config/aliases ~/.aliases
 
 ## github creds
 
-0. 
+0. intall brew
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
 1. install github cli
     ```bash
     brew install gh
