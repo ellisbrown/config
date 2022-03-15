@@ -33,4 +33,4 @@ alias mcf="mamba env create --file"
 
 # update conda environment from file
 alias cuf="conda env update --file"
-alias mcf="mamba env update --file"
+alias muf="mamba env update --file"
