@@ -23,7 +23,7 @@
 
 1. clone
     ```bash
-    git clone git@github.com:ellisbrown/config.git ~
+    git clone git@github.com:ellisbrown/config.git ~/config
     ```
 
 
