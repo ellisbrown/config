@@ -20,6 +20,22 @@
         ~/miniconda3/bin/conda init bash
         ~/miniconda3/bin/conda init zsh
         ```
+    4. git creds
+        1. intall brew
+            ```bash
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+            echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/ebrown/.zprofile
+            eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+            sudo apt-get install build-essential
+            ```
+        2. install github cli
+            ```bash
+            brew install gh
+            ```
+        3. login
+            ```bash
+            gh auth login
+            ```
 
 1. clone
     ```bash
@@ -44,19 +60,4 @@ symlink to aliases
 ln -s ~/config/aliases ~/.aliases
 ```
 
-
-## github creds
-
-0. intall brew
-    ```bash
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    ```
-1. install github cli
-    ```bash
-    brew install gh
-    ```
-2. login
-    ```bash
-    gh auth login
-    ```
 
