@@ -39,9 +39,14 @@
 
 1. clone
     ```bash
-    git clone git@github.com:ellisbrown/config.git ~/config
+    git clone https://github.com/ellisbrown/config.git ~/config
     ```
 
+2. setup
+    ```
+    bash config/aliases_init.sh
+    source ~/.zshrc
+    ```
 
 ## .bashrc / .zshrc
 
