@@ -34,3 +34,13 @@ alias mcf="mamba env create --file"
 # update conda environment from file
 alias cuf="conda env update --file"
 alias muf="mamba env update --file"
+
+
+#######################################
+### PYTHON ############################
+#######################################
+
+# wait for some specified amount of time
+wait() {
+	python ~/config/wait.py "$@"
+}
