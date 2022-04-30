@@ -7,6 +7,8 @@ rsc () {
 #######################################
 ### ALIASES ###########################
 #######################################
+
+# snakeviz
 alias sv="snakeviz --port 8081"
 
 ### TMUX ##############################
@@ -14,6 +16,15 @@ alias tn="tmux new -A -s"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
+
+### SHELL OPS #########################
+# https://unix.stackexchange.com/a/15656
+alias rscp='rsync -aP'
+alias rsmv='rsync -aP --remove-source-files'
+
+# https://askubuntu.com/a/22043
+alias sudo='sudo '
+
 
 ### NVIDIA ############################
 #alias ns="nvidia-smi"
