@@ -26,6 +26,10 @@ alias rsmv='rsync -aP --remove-source-files'
 alias sudo='sudo '
 
 
+# kill all processes of a user
+alias kys="sudo pkill -u $USER"
+
+
 ### NVIDIA ############################
 #alias ns="nvidia-smi"
 alias ns="watch -d -n 0.5 nvidia-smi"
