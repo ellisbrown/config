@@ -1,5 +1,11 @@
 #! /bin/sh
 
+# symlink to aliases
+ln -s ~/config/aliases ~/.aliases
+
+# symlink to tmux.conf
+ln -s ~/config/tmux.conf ~/.tmux.conf
+
 
 text="
 # https://askubuntu.com/a/195357
