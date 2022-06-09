@@ -65,9 +65,11 @@ symlink to aliases
 ln -s ~/config/aliases ~/.aliases
 ```
 
-symlink to tmux.conf
+symlink to configs
 ```bash
+# tmux
 ln -s ~/config/tmux.conf ~/.tmux.conf
+
+# gdb
+ln -s ~/config/gdbinit ~/.gdbinit
 ```
-
-
