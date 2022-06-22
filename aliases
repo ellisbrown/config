@@ -25,6 +25,8 @@ alias rsmv='rsync -aP --remove-source-files'
 # https://askubuntu.com/a/22043
 alias sudo='sudo '
 
+# list space in a directory
+alias space='sudo du -hxs ./* | sort -rh | head -20'
 
 # kill all processes of a user
 alias kys="sudo pkill -u $USER"
