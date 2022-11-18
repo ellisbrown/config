@@ -77,3 +77,18 @@ alias muf="mamba env update --file"
 wait() {
     python ~/config/wait.py "$@"
 }
+
+
+#######################################
+### SLURM #############################
+#######################################
+
+# GROGU
+alias si="sinfo -o \"%20P %5D %14F %8z %10m %10d %11l %16f %N\""
+alias sq="squeue -o \"%6i %36j %4t %10u %10q %10a %10g %12P %10Q %5D %11l %11L %R\""
+alias sc="scontrol show node"
+
+getbash () {
+        MEM="${4:-56}G"
+        srun -N 1 -t 0-48:00:00 -G $2 -c $3 -W 0 --partition=deepaklong --nodelist=grogu-$1 --mem=$MEM --pty /bin/bash -i
+}
