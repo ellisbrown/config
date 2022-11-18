@@ -18,10 +18,6 @@ alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 
 ### SHELL OPS #########################
-# https://unix.stackexchange.com/a/15656
-alias rscp='rsync -aP'
-alias rsmv='rsync -aP --remove-source-files'
-
 # https://askubuntu.com/a/22043
 alias sudo='sudo '
 
@@ -54,6 +50,13 @@ git-ssh () {
 	| sed 's/https:\/\/github.com\///' \
 	| sed 's/git@github.com://')
 }
+
+### RSYNC #############################
+# https://unix.stackexchange.com/a/15656
+alias rscp='rsync -aP'
+alias rsmv='rsync -aP --remove-source-files'
+# https://gist.github.com/KartikTalwar/4393116
+alias rsnc='rsync -aHAXxv --numeric-ids --progress -e "ssh -T -o Compression=no -x"'
 
 
 ### CONDA #############################
