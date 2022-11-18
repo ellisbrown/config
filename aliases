@@ -22,7 +22,11 @@ alias tk="tmux kill-session -t"
 alias sudo='sudo '
 
 # list space in a directory
-alias space='sudo du -hxs ./* | sort -rh | head -20'
+alias space='sudo du -cksh ./* | sort -rh'
+
+# count number of files in a directory
+alias count='ls -1 | wc -l'
+alias countall='sudo find . -type f | wc -l'
 
 # kill all processes of a user
 alias kys="sudo pkill -u $USER"
