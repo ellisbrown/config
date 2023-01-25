@@ -91,11 +91,22 @@ wait() {
 #######################################
 
 # GROGU
-alias si="sinfo -o \"%20P %5D %14F %8z %10m %10d %11l %16f %N\""
+body() {
+    IFS= read -r header
+    printf '%s\n' "$header"
+    "$@"
+}
+
+# alias si="sinfo -o \"%20P %5D %14F %8z %10m %10d %11l %16f %N\""
+alias si="sinfo --Node -O Partition:14,NodeList:15,StateLong:12,GresUsed:30,Gres,FreeMem:12,CPUsState:20 | grep 'long\|NODELIST' | body sort"
 alias sq="squeue -o \"%6i %36j %4t %10u %10q %10a %10g %12P %10Q %5D %11l %11L %R\""
 alias sc="scontrol show node"
 
 getbash () {
         MEM="${4:-56}G"
-        srun -N 1 -t 0-48:00:00 -G $2 -c $3 -W 0 --partition=deepaklong --nodelist=grogu-$1 --mem=$MEM --pty /bin/bash -i
+        srun -N 1 -t 0-48:00:00 -G $2 -c $3 -W 0 --partition=deepaklong --nodelist=grogu-$1 --mem=$MEM --pty /bin/zsh -i
+}
+getbasha () {
+        MEM="${4:-56}G"
+	srun -N 1 -t 0-48:00:00 -G $2 -c $3 -W 0 --partition=abhinavlong --nodelist=grogu-$1 --mem=$MEM --pty /bin/zsh -i
 }
