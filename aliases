@@ -90,6 +90,8 @@ wait() {
 ### SLURM #############################
 #######################################
 
+# courtesy of alex li =>
+
 # GROGU
 body() {
     IFS= read -r header
@@ -99,8 +101,12 @@ body() {
 
 # alias si="sinfo -o \"%20P %5D %14F %8z %10m %10d %11l %16f %N\""
 alias si="sinfo --Node -O Partition:14,NodeList:15,StateLong:12,GresUsed:30,Gres,FreeMem:12,CPUsState:20 | grep 'long\|NODELIST' | body sort"
-alias sq="squeue -o \"%6i %36j %4t %10u %10q %10a %10g %12P %10Q %5D %11l %11L %R\""
+alias sime="sinfo --Node -O Partition:14,NodeList:15,StateLong:12,GresUsed:30,Gres,FreeMem:12,CPUsState:20 | grep 'deepaklong\|NODELIST' | body sort"
+alias sq="squeue --sort=\"P,U,t,-p\" -o \"%6i %36j %4t %10u %10q %12P %10Q %5D %11l %11L %16R %8b %5C %m\""
+alias sqme="squeue -o \"%6i %50j %4t %10u %10q %12P %10Q %5D %11l %11L %16R %8b %5C %m\" -u acl2 | nl -v 0"
+alias sqd="squeue --sort=\"U,t,-p\" -o \"%6i %36j %4t %10u %10q %12P %10Q %5D %11l %11L %16R %8b %5C %m\" | body grep '0-19 \|1-19 \|1-40 \|1-3 \|0-24 \|deepak'"
 alias sc="scontrol show node"
+
 
 getbash () {
         MEM="${4:-56}G"
