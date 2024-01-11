@@ -11,12 +11,16 @@
         sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
         ```
         - change theme to `agnoster`
-    3. install [mambaforge](https://github.com/conda-forge/miniforge#mambaforge)
+    3. (alternatively, install `oh-by-bash`)
+        ```bash
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+        ```
+    4. install [mambaforge](https://github.com/conda-forge/miniforge#mambaforge)
         ```bash
         wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
         bash Mambaforge-$(uname)-$(uname -m).sh
         ```
-    4. git creds
+    5. git creds
         1. intall brew
             ```bash
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -42,6 +46,7 @@
     ```
     bash config/aliases_init.sh
     source ~/.zshrc
+    source ~/.bashhrc
     ```
 
 ## .bashrc / .zshrc
