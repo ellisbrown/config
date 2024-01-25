@@ -46,7 +46,7 @@
     ```
     bash config/aliases_init.sh
     source ~/.zshrc
-    source ~/.bashhrc
+    source ~/.bashrc
     ```
 
 ## .bashrc / .zshrc
