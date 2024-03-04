@@ -15,10 +15,10 @@
         ```bash
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
         ```
-    4. install [mambaforge](https://github.com/conda-forge/miniforge#mambaforge)
+    4. install [miniforge](https://github.com/conda-forge/miniforge)
         ```bash
-        wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
-        bash Mambaforge-$(uname)-$(uname -m).sh
+        curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+        bash Miniforge3-$(uname)-$(uname -m).sh
         ```
     5. git creds
         1. intall brew
@@ -46,7 +46,7 @@
     ```
     bash config/aliases_init.sh
     source ~/.zshrc
-    source ~/.bashhrc
+    source ~/.bashrc
     ```
 
 ## .bashrc / .zshrc
