@@ -126,5 +126,5 @@ watchquota() {
 	watch -d -n 0.5 "squeue -u $(whoami) -o '%.18i %.20P %.15j %.8u %.2t %.10M %.6D %.20S %R %p'"
 }
 watchusage() {
-	watch -d -n 1.0 "sinfo -N -p a100_1,a100_2,rtx8000 -O '\''NodeList:8,Partition:12,StateCompact:24,CPUsState:16,Memory:16,FreeMem:16,GresUsed:24'\'' | grep -v '\''4(IDX:0-3)'\'"
+	watch -d -n 1.0 "sinfo -N -p a100_1,a100_2,rtx8000 -O 'NodeList:8,Partition:12,StateCompact:24,CPUsState:16,Memory:16,FreeMem:16,GresUsed:24' | grep -v '4(IDX:0-3)'"
 }
