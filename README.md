@@ -44,7 +44,7 @@
 
 2. setup
     ```
-    bash config/aliases_init.sh
+    bash ~/config/aliases_init.sh
     source ~/.zshrc
     source ~/.bashrc
     ```
